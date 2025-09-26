@@ -1,0 +1,509 @@
+{% load static %} 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Call and Vision Secondary School</title>
+  <meta name="description" content="Call and Vision Secondary School — Discover your vision and calling for life. Missionary school focused on character, discipline, academics and community service.">
+
+  <!-- Bootstrap 5 CDN -->
+   <!-- AOS Animation CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Local stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+  <!-- Preloader with school logo animation -->
+  <div id="preloader" class="preloader d-flex justify-content-center align-items-center">
+    <div class="logo-wrap text-center">
+      <!-- Replace this <img> with your high-resolution transparent logo (svg/png) -->
+      <img id="schoolLogo" src="{% static 'img/logo.jpg' %}" alt="School Logo" width="140" height="140" class="logo-img rounded-circle">
+      <p class="mt-3 small motto">"Discover your vision and calling for life"</p>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg nav-gradient">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#"> 
+        <img src="{% static 'img/logo.jpg' %}" alt="CVSS" id="navLogo" class="rounded-circle" style="width:48px; height:48px; object-fit:cover;">
+        <div>
+          <div class="fw-bold">Call & Vision Secondary</div>
+          <small class="text-muted d-block">Discover your vision and calling for life</small>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / BANNER -->
+  <header id="hero" class="hero-section position-relative overflow-hidden">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-bold animated-heading" data-i18n-key="site_title">Call & Vision Secondary School</h1>
+          <p class="lead text-muted" data-i18n-key="site_sub">A missionary school dedicated to building character, discipline, and academic excellence — blending education with spiritual formation and community service.</p>
+
+          <div class="d-flex gap-2 mt-4">
+            <a href="#admissions" class="btn btn-lg btn-outline-light btn-glow" id="applyBtn" data-i18n-key="apply_now">Apply Now</a>
+            <a href="#programs" class="btn btn-lg btn-light text-primary" data-i18n-key="explore">Explore Programs</a>
+          </div>
+
+          <ul class="list-unstyled promo-features mt-4">
+            <li><i class="bi bi-check-circle-fill"></i> <span data-i18n-key="feature_ict">Modern Computer Lab & ICT tools</span></li>
+            <li><i class="bi bi-check-circle-fill"></i> <span data-i18n-key="feature_sports">Sports, talents & national competitions</span></li>
+            <li><i class="bi bi-check-circle-fill"></i> <span data-i18n-key="feature_vol">Annual German volunteers exchange program</span></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-5 text-center">
+          <div class="hero-card p-3 shadow-lg">
+            <img src="{% static 'img/1.png' %}" alt="students" class="img-fluid rounded animated-zoom" loading="lazy">
+            <div class="mt-2 small text-muted" data-i18n-key="hero_caption">Students at Call & Vision — character, learning and service</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated decorative shapes -->
+    <div class="decor-shape shape-1"></div>
+    <div class="decor-shape shape-2"></div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <h2 data-i18n-key="about_title">About Us</h2>
+          <p class="text-muted" data-i18n-key="about_text">Call & Vision Secondary School is a missionary institution that emphasizes spiritual growth alongside academic excellence. We train students to be disciplined, socially responsible, and equipped with practical skills to impact their communities.</p>
+
+          <h5 class="mt-4" data-i18n-key="mission_title">Our Mission</h5>
+          <p class="small text-muted" data-i18n-key="mission_text">To nurture young people through Christ-centered education that develops character, leadership, and a lifelong calling for service.</p>
+
+          <h5 class="mt-3" data-i18n-key="core_values">Core Values</h5>
+          <div class="d-flex flex-wrap gap-2 mt-2">
+            <span class="badge bg-light text-dark p-2">Faith</span>
+            <span class="badge bg-light text-dark p-2">Discipline</span>
+            <span class="badge bg-light text-dark p-2">Excellence</span>
+            <span class="badge bg-light text-dark p-2">Service</span>
+            <span class="badge bg-light text-dark p-2">Character</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card p-3 shadow-sm border-0 feature-animated">
+            <div class="card-body">
+              <h5 data-i18n-key="diff_title">What makes us different</h5>
+              <ul class="small">
+                <li data-i18n-key="diff_1">Yearly German volunteer exchange focusing on English, culture sharing and relationship building.</li>
+                <li data-i18n-key="diff_2">Active sports & talent programs with competitions and awards.</li>
+                <li data-i18n-key="diff_3">Modern ICT lab and project-based learning opportunities.</li>
+                <li data-i18n-key="diff_4">Community outreach programs and student-led initiatives.</li>
+              </ul>
+
+              <div class="mt-3">
+                <a href="#volunteers" class="link-primary" data-i18n-key="learn_vol">Learn about our volunteers</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS / FEATURES -->
+  <section id="programs" class="py-5 bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 data-i18n-key="programs_title">Programs & Facilities</h2>
+        <div class="text-muted small" data-i18n-key="programs_sub">Modern tools that equip our learners</div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-card p-4 h-100 shadow-sm card-animated">
+            <i class="bi bi-laptop display-6 icon"></i>
+            <h5 class="mt-3" data-i18n-key="prog_ict">Computer Lab & ICT</h5>
+            <p class="small text-muted" data-i18n-key="prog_ict_text">Fully equipped lab with modern tools for coding, digital literacy and practical ICT projects.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-card p-4 h-100 shadow-sm card-animated">
+            <i class="bi bi-trophy display-6 icon"></i>
+            <h5 class="mt-3" data-i18n-key="prog_talents">Talents & Competitions</h5>
+            <p class="small text-muted" data-i18n-key="prog_talents_text">Music, drama, debate and sports competitions to grow student gifts and confidence.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-card p-4 h-100 shadow-sm card-animated">
+            <i class="bi bi-people display-6 icon"></i>
+            <h5 class="mt-3" data-i18n-key="prog_vol">Volunteers Program</h5>
+            <p class="small text-muted" data-i18n-key="prog_vol_text">Annual volunteers from Germany — cultural exchange, English practice and collaborative projects.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- GALLERY with classic filters and creative animations -->
+<section id="gallery" class="py-5 bg-white"></section>
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 data-i18n-key="gallery_title">Gallery</h2>
+        <div>
+          <div class="btn-group btn-group-sm" role="group" aria-label="Filter gallery">
+            <button class="btn btn-outline-primary active" data-filter="all">All</button>
+            <button class="btn btn-outline-primary" data-filter="academics">Academics</button>
+            <button class="btn btn-outline-primary" data-filter="sports">Sports</button>
+            <button class="btn btn-outline-primary" data-filter="volunteers">Volunteers</button>
+            <button class="btn btn-outline-primary" data-filter="talents">Talents</button>
+          </div>
+        </div>
+      </div>
+
+    <div id="galleryGrid" class="row g-3">
+        <!-- Gallery items will be injected here by JS -->
+        <div class="col-sm-6 col-lg-4 gallery-item" data-category="academics">
+            <a href="{% static 'img/1.png' %}" data-lightbox="gallery" class="position-relative d-block">
+                <span class="gallery-title position-absolute top-0 start-0 w-100 text-center text-light bg-dark bg-opacity-50 py-1">Computer ICT  studentS learning</span>
+                <img src="{% static 'img/1.png' %}" alt="Gallery Image 1" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-4 gallery-item" data-category="academics">
+            <a href="{% static 'img/2.png' %}" data-lightbox="gallery" class="position-relative d-block">
+                <span class="gallery-title position-absolute top-0 start-0 w-100 text-center text-light bg-dark bg-opacity-50 py-1">Laboratory activities</span>
+                <img src="{% static 'img/2.png' %}" alt="Gallery Image 2" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-4 gallery-item" data-category="volunteers">
+            <a href="{% static 'img/8.png' %}" data-lightbox="gallery" class="position-relative d-block">
+                <span class="gallery-title position-absolute top-0 start-0 w-100 text-center text-light bg-dark bg-opacity-50 py-1">Volunteers</span>
+                <img src="{% static 'img/8.png' %}" alt="Gallery Image 3" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-4 gallery-item" data-category="talents">
+            <a href="{% static 'img/10.png' %}" data-lightbox="gallery" class="position-relative d-block">
+                <span class="gallery-title position-absolute top-0 start-0 w-100 text-center text-light bg-dark bg-opacity-50 py-1">Talents</span>
+                <img src="{% static 'img/10.png' %}" alt="Gallery Image 4" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-4 gallery-item" data-category="sports">
+            <a href="{% static 'img/5.png' %}" data-lightbox="gallery" class="position-relative d-block">
+                <span class="gallery-title position-absolute top-0 start-0 w-100 text-center text-light bg-dark bg-opacity-50 py-1">Students playing Volleyball</span>
+                <img src="{% static 'img/5.png' %}" alt="Gallery Image 5" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-4 gallery-item" data-category="academics">
+            <a href="{% static 'img/6.png' %}" data-lightbox="gallery" class="position-relative d-block">
+                <span class="gallery-title position-absolute top-0 start-0 w-100 text-center text-light bg-dark bg-opacity-50 py-1">Domitory</span>
+                <img src="{% static 'img/6.png' %}" alt="Gallery Image 6" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-4 gallery-item" data-category="academics">
+            <a href="{% static 'img/7.png' %}" data-lightbox="gallery" class="position-relative d-block">
+                <span class="gallery-title position-absolute top-0 start-0 w-100 text-center text-light bg-dark bg-opacity-50 py-1">PREP time</span>
+                <img src="{% static 'img/7.png' %}" alt="Gallery Image 7" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-4 gallery-item" data-category="academics">
+            <a href="{% static 'img/8.png' %}" data-lightbox="gallery" class="position-relative d-block">
+                <span class="gallery-title position-absolute top-0 start-0 w-100 text-center text-light bg-dark bg-opacity-50 py-1">Volunteer with students</span>
+                <img src="{% static 'img/8.png' %}" alt="Gallery Image 8" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-4 gallery-item" data-category="academics">
+            <a href="{% static 'img/9.png' %}" data-lightbox="gallery" class="position-relative d-block">
+                <span class="gallery-title position-absolute top-0 start-0 w-100 text-center text-light bg-dark bg-opacity-50 py-1">Academics</span>
+                <img src="{% static 'img/9.png' %}" alt="Gallery Image 9" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-4 gallery-item" data-category="sports">
+            <a href="{% static 'img/10.png' %}" data-lightbox="gallery" class="position-relative d-block">
+                <span class="gallery-title position-absolute top-0 start-0 w-100 text-center text-light bg-dark bg-opacity-50 py-1">Music/worships </span>
+                <img src="{% static 'img/10.png' %}" alt="Gallery Image 10" class="img-fluid">
+            </a>
+        </div>
+    </div>
+
+      <!-- Simple pagination controls (JS will handle) -->
+      <nav aria-label="Gallery pages" class="mt-4">
+        <ul id="galleryPagination" class="pagination justify-content-center"></ul>
+      </nav>
+    </div>
+
+    <!-- Lightbox modal -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen-sm-down modal-xl modal-dialog-centered">
+        <div class="modal-content bg-transparent border-0 shadow-none">
+          <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+            <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+            <img src="" id="lightboxImg" class="img-fluid rounded" alt="" style="max-height:85vh; box-shadow:0 10px 40px rgba(12,18,36,.45)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- VOLUNTEERS / EXCHANGE -->
+  <section id="volunteers" class="py-5 bg-gradient">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 data-i18n-key="vol_title">Annual Volunteers Exchange</h2>
+          <p class="text-muted" data-i18n-key="vol_text">Every year we host volunteers from Germany who join our teachers and students in cultural exchange, English language practice, and collaborative school projects. This program strengthens international relationships and broadens perspectives.</p>
+
+          <ul class="small">
+            <li data-i18n-key="vol_1">English conversation clubs and tutoring</li>
+            <li data-i18n-key="vol_2">Cultural workshops — food, music and traditions</li>
+            <li data-i18n-key="vol_3">Joint community service projects</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-outline-primary mt-3" data-bs-toggle="modal" data-bs-target="#volunteerModal" data-i18n-key="invite">Invite Volunteers</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="card p-3 shadow-sm feature-animated">
+            <img src="{% static 'img/12.png' %}" alt="volunteers" class="img-fluid rounded" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (new) -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>What parents & volunteers say</h2>
+        <p class="text-muted small">Real stories from our community — integrity, transformation and impact.</p>
+      </div>
+
+      <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+              <img src="{% static 'img/1.jpg' %} " class="rounded-circle me-3" width="84" height="84" alt="parent">
+              <div>
+                <h5 class="mb-1">Mr. Christopher </h5>
+                <p class="small text-muted mb-1">Parent</p>
+                <p class="mb-0">"My son has grown in discipline and confidence — the volunteers and teachers are caring and committed."</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+              <img src="{% static 'img/v3.png' %}" class="rounded-circle me-3" width="84" height="84" alt="volunteer">
+              <div>
+                <h5 class="mb-1">Lukas (Germany)</h5>
+                <p class="small text-muted mb-1">Volunteer</p>
+                <p class="mb-0">"Working with the students was life-changing — great cultural exchange and strong community spirit."</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+              <img src="{% static 'img/1.png' %}" class="rounded-circle me-3" width="84" height="84" alt="teacher">
+              <div>
+                <h5 class="mb-1">Mr. John</h5>
+                <p class="small text-muted mb-1">Teacher</p>
+                <p class="mb-0">"Students are equipped with both skills and character — the school balances academics and spiritual growth very well."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENTS (new) -->
+  <section id="comments" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h3>Leave a comment</h3>
+          <p class="text-muted small">Share feedback, ask questions, or leave encouragement for our students and volunteers. Comments are stored locally (demo).</p>
+
+          <form id="commentForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input class="form-control" name="name" required>
+              <div class="invalid-feedback">Please enter your name</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Comment</label>
+              <textarea class="form-control" name="comment" rows="4" required></textarea>
+              <div class="invalid-feedback">Please write a comment</div>
+            </div>
+            <div class="mb-3 d-flex gap-2">
+              <button class="btn btn-primary" type="submit">Post Comment</button>
+              <button class="btn btn-outline-secondary" type="button" id="clearComments">Clear All</button>
+            </div>
+          </form>
+
+          <small class="text-muted">Note: This demo stores comments in your browser (localStorage).</small>
+        </div>
+
+        <div class="col-lg-6">
+          <h3>Recent comments</h3>
+          <div id="commentsList" class="mt-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMISSIONS CALL TO ACTION -->
+  <section id="admissions" class="py-5 bg-gradient text-light">
+    <div class="container text-center">
+      <h2 data-i18n-key="admissions_title">Admissions</h2>
+      <p class="text-light mb-4" data-i18n-key="admissions_text">Join us and be part of a school that equips you for life — academically, spiritually, and in service to society.</p>
+      <a href="#" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#admissionModal" data-i18n-key="apply">Apply / Enquire</a>
+    </div>
+  </section>
+
+  <!-- CONTACT & FOOTER -->
+  <footer id="contact" class="py-5 bg-dark text-light">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 data-i18n-key="contact_title">Contact</h5>
+          <p class="small">Call and Vision Secondary School<br>Mtwara District, Tanzania</p>
+          <p class="small mb-0">Phone: +255 7XX XXX XXX</p>
+          <p class="small">Email: info@callandvision.ac.tz</p>
+        </div>
+        <div class="col-md-4">
+          <h5 data-i18n-key="quick_links">Quick Links</h5>
+          <ul class="list-unstyled small">
+            <li><a href="#about" class="link-light">About</a></li>
+            <li><a href="#programs" class="link-light">Programs</a></li>
+            <li><a href="#gallery" class="link-light">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h5 data-i18n-key="follow_us">Follow Us</h5>
+          <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-twitter fs-4"></i></a>
+      </div>
+
+      <div class="text-center mt-4 small text-light">© <span id="year"></span> Call and Vision Secondary School — All rights reserved.</div>
+
+     <div class="text-center mt-2">
+       <a href="#hero" class="link-light small"><i class="bi bi-arrow-up-circle"></i> <span data-i18n-key="back_top">Back to top</span></a>
+    </div>
+  </footer>
+
+  <!-- ADMISSION Modal -->
+  <div class="modal fade" id="admissionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Admission Enquiry</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="admissionForm" class="needs-validation" novalidate>
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Full name</label>
+                <input class="form-control" name="name" required>
+                <div class="invalid-feedback">Please enter name</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Parent / Guardian</label>
+                <input class="form-control" name="guardian" required>
+                <div class="invalid-feedback">Please enter guardian name</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <input class="form-control" name="phone" required>
+                <div class="invalid-feedback">Please enter phone number</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" name="email">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" name="message" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-primary" type="submit">Send Enquiry</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- VOLUNTEER INVITE Modal -->
+  <div class="modal fade" id="volunteerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Invite Volunteers / Partner</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="small">To discuss volunteer exchange or school partnership, email <a href="mailto:info@callandvision.ac.tz">info@callandvision.ac.tz</a> or use the contact form.</p>
+        </div>
+        <div class="modal-footer"><button class="btn btn-primary" data-bs-dismiss="modal">Ok</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Local script -->
+  <script src="{% static 'js/script.js' %}"></script>
+
+  <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 1200,   // animation duration (ms)
+        once: true,       // run only once
+        easing: 'ease-in-out'
+    });
+    </script>
+
+</body>
+</html>
