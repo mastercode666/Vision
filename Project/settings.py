@@ -55,6 +55,9 @@ MIDDLEWARE = [
     "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
 ROOT_URLCONF = "Project.urls"
 
 TEMPLATES = [
@@ -120,9 +123,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = "static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+SSTATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]   # 👈 project-level static folder
+STATIC_ROOT = BASE_DIR / "staticfiles"     # for collected static files
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
